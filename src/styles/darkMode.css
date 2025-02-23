@@ -1,0 +1,216 @@
+:root {
+  /* Professional Dark Theme Colors */
+  --medical-dark-primary: #111827;    /* Darker blue-gray */
+  --medical-dark-secondary: #1f2937;  /* Dark blue-gray */
+  --medical-dark-tertiary: #374151;   /* Medium blue-gray */
+  
+  /* New Professional Accent Colors */
+  --medical-accent-blue: #3b82f6;     /* Bright blue */
+  --medical-accent-indigo: #6366f1;   /* Indigo */
+  --medical-accent-cyan: #06b6d4;     /* Cyan */
+  --medical-accent-green: #10b981;    /* Emerald */
+  --medical-accent-red: #ef4444;      /* Red */
+  
+  /* Text Colors */
+  --dark-text-primary: #f9fafb;       /* Almost white */
+  --dark-text-secondary: #d1d5db;     /* Light gray */
+  --dark-text-muted: #9ca3af;         /* Muted gray */
+  
+  /* Border & Shadow */
+  --dark-border: rgba(75, 85, 99, 0.3);
+  --dark-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --dark-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --dark-shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.5);
+  
+  /* Professional Gradients */
+  --medical-gradient-blue: linear-gradient(135deg, #3b82f6, #2563eb);
+  --medical-gradient-indigo: linear-gradient(135deg, #6366f1, #4f46e5);
+  --medical-gradient-cyan: linear-gradient(135deg, #06b6d4, #0891b2);
+  
+  /* Accent Gradient */
+  --medical-accent-gradient: linear-gradient(
+    135deg,
+    var(--medical-accent-blue),
+    var(--medical-accent-indigo)
+  );
+}
+
+/* Enhanced Dark Mode Styles */
+.dark {
+  background: var(--medical-dark-primary);
+  color: var(--dark-text-primary);
+  --bg-primary: var(--medical-dark-primary);
+  --bg-secondary: var(--medical-dark-secondary);
+  --bg-elevated: var(--medical-dark-tertiary);
+  --border-color: var(--dark-border);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+}
+
+/* Updated Card Styles */
+.dark .card {
+  background: var(--medical-dark-secondary);
+  border: 1px solid var(--dark-border);
+  box-shadow: var(--dark-shadow-sm);
+}
+
+.dark .card:hover {
+  box-shadow: var(--dark-shadow-md);
+  border-color: var(--medical-accent-blue);
+  transform: translateY(-2px);
+}
+
+/* Enhanced Button Styles */
+.dark .btn-primary {
+  background: var(--medical-gradient-blue);
+  color: var(--dark-text-primary);
+  border: none;
+}
+
+.dark .btn-secondary {
+  background: var(--medical-dark-tertiary);
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+/* Form Elements */
+.dark input, 
+.dark textarea, 
+.dark select {
+  background: var(--medical-dark-tertiary);
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: var(--medical-accent-blue);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Updated Animations */
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.5));
+  }
+}
+
+/* Navigation Bar */
+.dark .navbar {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.dark .nav-brand .logo-text {
+  color: var(--dark-text-primary);
+}
+
+.dark .nav-links .tab-btn {
+  color: var(--dark-text-secondary);
+}
+
+.dark .nav-links .tab-btn.active {
+  color: var(--medical-accent-blue);
+  background: rgba(14, 165, 233, 0.1);
+}
+
+.dark .nav-links .tab-btn:hover {
+  background: rgba(14, 165, 233, 0.15);
+}
+
+/* Main Content Areas */
+.dark .main-content {
+  background: var(--medical-dark-primary);
+}
+
+.dark .content-wrapper {
+  background: linear-gradient(
+    to bottom,
+    var(--medical-dark-primary),
+    var(--medical-dark-secondary)
+  );
+}
+
+/* Medical Icons & Indicators */
+.dark .medical-icon {
+  color: var(--medical-accent-blue);
+  filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.3));
+}
+
+.dark .status-indicator {
+  background: var(--medical-dark-tertiary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .status-indicator.active {
+  background: var(--medical-accent-green);
+  box-shadow: 0 0 12px rgba(5, 150, 105, 0.3);
+}
+
+/* Footer */
+.dark footer {
+  background: var(--medical-dark-secondary);
+  border-top: 1px solid var(--dark-border);
+}
+
+/* Scrollbar */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--medical-dark-tertiary);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--medical-accent-blue);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--medical-accent-purple);
+}
+
+/* Tooltips & Popovers */
+.dark .tooltip {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid var(--medical-accent-blue);
+  backdrop-filter: blur(8px);
+}
+
+/* Loading States */
+.dark .loading-spinner {
+  color: var(--medical-accent-blue);
+}
+
+/* Error States */
+.dark .error-message {
+  color: var(--medical-accent-red);
+}
+
+/* Success States */
+.dark .success-message {
+  color: var(--medical-accent-green);
+}
+
+/* Add to the root level */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+/* Optimize performance */
+.dark * {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+} 

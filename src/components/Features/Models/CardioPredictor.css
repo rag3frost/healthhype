@@ -1,0 +1,120 @@
+.cardio-assessment {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ef4444;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assessment-report {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.risk-level {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.risk-level svg {
+  margin-right: 4px;
+}
+
+.risk-level.high {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.risk-level.moderate {
+  background-color: #f59e0b;
+  color: #fff;
+}
+
+.risk-level.low {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.metrics ul,
+.recommendations ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.metrics li,
+.recommendations li {
+  margin: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.metrics li::before,
+.recommendations li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #3b82f6;
+}
+
+.prediction {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+
+h4 {
+  color: #1f2937;
+  margin-bottom: 10px;
+}

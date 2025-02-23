@@ -1,0 +1,55 @@
+:root {
+  /* Light theme */
+  --primary-color: #0288d1;
+  --primary-rgb: 2, 136, 209;
+  --secondary-color: #00acc1;
+  --text-color: #2c3e50;
+  --background-color: #ffffff;
+  --border-radius: 8px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-border: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --primary-color: #ffd700;  /* Golden yellow */
+  --primary-rgb: 255, 215, 0;
+  --secondary-color: #ffc107;  /* Amber */
+  --text-color: #e0e0e0;
+  --background-color: #121212;  /* Dark grey */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(18, 18, 18, 0.95);
+  --nav-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Add smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add modern selection style */
+::selection {
+  background: var(--secondary-color);
+  color: white;
+} 

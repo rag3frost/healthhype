@@ -1,0 +1,28 @@
+.risk-level {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.risk-level svg {
+  margin-right: 4px;
+}
+
+.risk-level.high {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.risk-level.moderate {
+  background-color: #f59e0b;
+  color: #fff;
+}
+
+.risk-level.low {
+  background-color: #10b981;
+  color: #fff;
+}

@@ -1,0 +1,712 @@
+:root {
+  --medical-navy: #1a365d;
+  --medical-white: #ffffff;
+  --medical-gray: #718096;
+  --medical-teal: #319795;
+  --medical-light-blue: #ebf8ff;
+  --medical-dark-blue: #2c5282;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--medical-navy);
+  background: var(--medical-white);
+}
+
+/* Hero Section */
+.about-hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--medical-light-blue) 0%,
+    rgba(49, 151, 149, 0.1) 100%
+  );
+  border-radius: 20px;
+  margin-bottom: 6rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--medical-navy);
+}
+
+.accent-text {
+  color: var(--medical-teal);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--medical-gray);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.impact-stats {
+  width: 100%;
+  max-width: 800px;
+  background: var(--medical-white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.chart-label {
+  text-align: center;
+  color: var(--medical-gray);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--medical-navy);
+  margin-bottom: 1rem;
+}
+
+.section-underline {
+  height: 4px;
+  width: 60px;
+  background: var(--medical-teal);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 6rem 0;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-statement {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--medical-navy);
+  text-align: center;
+  margin-bottom: 4rem;
+  font-style: italic;
+}
+
+.vision-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.vision-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--medical-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.vision-point:hover {
+  transform: translateY(-5px);
+}
+
+.point-icon {
+  font-size: 2rem;
+  color: var(--medical-teal);
+}
+
+.point-content h3 {
+  color: var(--medical-navy);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.point-content p {
+  color: var(--medical-gray);
+  line-height: 1.6;
+}
+
+/* Expertise Section */
+.expertise-section {
+  padding: 6rem 0;
+  background: var(--medical-light-blue);
+  margin: 4rem -2rem;
+  padding: 6rem 2rem;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.expertise-card {
+  background: var(--medical-white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-icon {
+  font-size: 2.5rem;
+  color: var(--medical-teal);
+  margin-bottom: 1.5rem;
+}
+
+.expertise-card h3 {
+  color: var(--medical-navy);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.expertise-card p {
+  color: var(--medical-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.accuracy-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--medical-teal);
+  color: var(--medical-white);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.expertise-details {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-details li {
+  color: var(--medical-gray);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.expertise-details li::before {
+  content: "•";
+  color: var(--medical-teal);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .mission-statement {
+    font-size: 1.25rem;
+  }
+
+  .vision-points {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 1rem;
+}
+
+.header-underline {
+  height: 4px;
+  background: linear-gradient(90deg, var(--medical-accent-blue), var(--medical-accent-purple));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.company-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.section-content {
+  padding-right: 2rem;
+}
+
+.section-content h2 {
+  font-size: 2.2rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.intro-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.values-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.values-section h2 {
+  font-size: 2.2rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-section {
+  padding: 4rem 0;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--medical-accent-blue);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+  padding-right: 2rem;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  right: -6px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--medical-accent-blue);
+  border: 2px solid white;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+  right: auto;
+  left: -6px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.year {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background: var(--medical-accent-blue);
+  color: white;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.team-section h2 {
+  font-size: 2.2rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--medical-accent-blue);
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: var(--text-secondary);
+}
+
+.contact-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(124, 58, 237, 0.05));
+  border-radius: 20px;
+  margin-top: 4rem;
+}
+
+.contact-section h2 {
+  font-size: 2.2rem;
+  color: var(--medical-accent-blue);
+  margin-bottom: 3rem;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--medical-accent-blue);
+}
+
+/* Dark mode styles */
+.dark .about-container {
+  background: var(--medical-dark-primary);
+  color: var(--dark-text-primary);
+}
+
+.dark .about-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 233, 0.1),
+    rgba(124, 58, 237, 0.1)
+  );
+}
+
+.dark .hero-content h1 {
+  color: var(--dark-text-primary);
+}
+
+.dark .hero-subtitle {
+  color: var(--dark-text-secondary);
+}
+
+.dark .impact-stats {
+  background: var(--medical-dark-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .chart-label {
+  color: var(--dark-text-secondary);
+}
+
+.dark .section-header h2 {
+  color: var(--dark-text-primary);
+}
+
+.dark .mission-statement {
+  color: var(--dark-text-primary);
+}
+
+.dark .vision-point {
+  background: var(--medical-dark-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .point-content h3 {
+  color: var(--dark-text-primary);
+}
+
+.dark .point-content p {
+  color: var(--dark-text-secondary);
+}
+
+.dark .expertise-section {
+  background: var(--medical-dark-secondary);
+}
+
+.dark .expertise-card {
+  background: var(--medical-dark-tertiary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .expertise-card h3 {
+  color: var(--dark-text-primary);
+}
+
+.dark .expertise-card p {
+  color: var(--dark-text-secondary);
+}
+
+.dark .expertise-details li {
+  color: var(--dark-text-secondary);
+}
+
+.dark .expertise-details li::before {
+  color: var(--medical-accent-blue);
+}
+
+.dark .value-card {
+  background: var(--medical-dark-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .value-card h3 {
+  color: var(--dark-text-primary);
+}
+
+.dark .value-card p {
+  color: var(--dark-text-secondary);
+}
+
+.dark .timeline-content {
+  background: var(--medical-dark-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .year {
+  background: var(--medical-accent-blue);
+  color: var(--dark-text-primary);
+}
+
+.dark .team-card {
+  background: var(--medical-dark-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark .team-card h3 {
+  color: var(--dark-text-primary);
+}
+
+.dark .team-card p {
+  color: var(--dark-text-secondary);
+}
+
+.dark .contact-section {
+  background: linear-gradient(135deg, 
+    rgba(14, 165, 233, 0.1), 
+    rgba(124, 58, 237, 0.1)
+  );
+}
+
+/* Update chart colors for dark mode */
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  stroke: var(--dark-border);
+}
+
+.dark .recharts-text {
+  fill: var(--dark-text-secondary);
+}
+
+.dark .recharts-tooltip-wrapper {
+  background: var(--medical-dark-secondary) !important;
+  border: 1px solid var(--dark-border) !important;
+  color: var(--dark-text-primary) !important;
+}
+
+.dark .recharts-bar-rectangle {
+  fill: var(--medical-accent-blue);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .company-intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: 2rem;
+  }
+
+  .timeline-marker {
+    left: -6px;
+    right: auto;
+  }
+
+  .timeline-item:nth-child(even) .timeline-marker {
+    left: -6px;
+  }
+
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-content h2,
+  .values-section h2,
+  .timeline-section h2,
+  .team-section h2,
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.feature-icon,
+.tech-icon,
+.cert-icon {
+  animation: float 3s ease-in-out infinite;
+} 

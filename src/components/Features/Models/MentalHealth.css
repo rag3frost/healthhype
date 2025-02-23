@@ -1,0 +1,253 @@
+.mental-health-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.mental-health-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mental-health-header h2 {
+  font-size: 1.75rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+.mental-health-header p {
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.mood-tracker {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mood-tracker p {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mood-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mood-btn:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+}
+
+.mood-btn.active {
+  border-color: #3b82f6;
+  background: #ebf5ff;
+}
+
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 600px;
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 1rem;
+  border-radius: 12px;
+  animation: messageAppear 0.3s ease;
+}
+
+.message.user {
+  background: #3b82f6;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background: white;
+  color: #1f2937;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.message-content {
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-container {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.input-area {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.textarea-wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+.mental-health-input {
+  width: 100%;
+  min-height: 24px;
+  max-height: 200px;
+  padding: 12px 45px 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  transition: all 0.2s ease;
+  overflow-y: auto;
+}
+
+.mental-health-input:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.character-count {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 0.875rem;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.submit-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.loading-dot {
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.loading-dot:nth-child(1) { animation-delay: -0.32s; }
+.loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+.mental-health-disclaimer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #fee2e2;
+  border-radius: 8px;
+  color: #991b1b;
+}
+
+.mental-health-disclaimer p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .mental-health-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .chat-interface {
+    height: 500px;
+  }
+  
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .submit-button {
+    margin-top: 1rem;
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+}
