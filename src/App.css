@@ -61,6 +61,7 @@
 }
 
 /* Add smooth transitions for content */
+/*Sujal*/
 .content-wrapper {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
