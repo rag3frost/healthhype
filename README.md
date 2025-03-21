@@ -160,7 +160,7 @@ HealthHype is designed to be a supplementary tool and should not replace profess
 
 ## 👥 Authors
 
-- Your Name - Initial work - [YourGithub](https://github.com/rag3frost)
+- Sujal Sakhare - [Github](https://github.com/rag3frost)
 
 ## 🙏 Acknowledgments
 
