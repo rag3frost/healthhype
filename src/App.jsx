@@ -43,7 +43,7 @@ function App() {
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
     });
-
+//sj
     return () => subscription.unsubscribe();
   }, []);
 
